@@ -1,7 +1,6 @@
 #!/usr/bin/perl -w
 
 use strict;
-use List::Util qw(shuffle);
 
 # Get a random integer (faster than int(rand))
 use Math::Random::Secure qw(irand);
