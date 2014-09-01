@@ -1,3 +1,11 @@
+make_random_seed_simple.pl
+==========================
+
+Make random seed (random list of words). No user input needed. Maybe this is better because adding random numbers produce less random result.
+
+<a href="http://stackoverflow.com/questions/14741158/does-adding-random-numbers-make-them-more-random">Does adding random numbers make them more random?</a> No. It makes them less random.
+
+
 make_random_seed.pl
 ===================
 
