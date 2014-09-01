@@ -13,6 +13,17 @@ You need to install `Math::Random::Secure` first:
 $ cpan install Math::Random::Secure 
 ```
 
+make_random_seed_string.pl
+==========================
+
+Make random seed (random list of words). The program will ask for random strings. You can make them using dice and some random book. You can pick random words from random pages or use a dice for sentence number and word number.
+
+You need to install `Math::Random::Secure` first:
+
+```
+$ cpan install Math::Random::Secure 
+```
+
 make_random_seed_maybe_too_complex.pl
 =====================================
 
@@ -23,15 +34,4 @@ You need to install `Math::Random::Secure` and `Crypt::Random` first:
 ```
 $ cpan install Math::Random::Secure 
 $ cpan install Crypt::Random
-```
-
-make_random_seed_string.pl
-==========================
-
-Make random seed (random list of words). The program will ask for random strings. You can make them using dice and some random book. You can pick random words from random pages or use a dice for sentence number and word number.
-
-You need to install `Math::Random::Secure` first:
-
-```
-$ cpan install Math::Random::Secure 
 ```
