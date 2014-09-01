@@ -1,11 +1,11 @@
 make_random_seed_simple.pl
 ==========================
 
-Make random seed (random list of words). No user input needed. Maybe this is better because adding random numbers produce less random result.
+Make random seed (random list of words). No user input needed.
 
 <a href="http://stackoverflow.com/questions/14741158/does-adding-random-numbers-make-them-more-random">Does adding random numbers make them more random?</a> No. It makes them less random.
 
-Ff the second random number is relatively small (for example: 1..6), there is little decrease of randomness.
+If the second random number is relatively small (for example: 1..6), there is little decrease of randomness.
 
 But the scripts below are using `%` (<a href="http://en.wikipedia.org/wiki/Modulo_operation">modulo operation</a>), so I suppose adding random numbers in this way is not bad:
 
