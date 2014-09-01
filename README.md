@@ -7,7 +7,7 @@ Make random seed (random list of words). No user input needed. Maybe this is bet
 
 But if the second random number is relatively small (for example: 1..6), maybe there is no decrease of randomness.
 
-Also the scripts below are using `%` (<a href="http://en.wikipedia.org/wiki/Modulo_operation">modulo operation</a>), so I suppose adding big enough random numbers in this way is not bad:
+Also the scripts below are using `%` (<a href="http://en.wikipedia.org/wiki/Modulo_operation">modulo operation</a>), so I suppose adding ~~big enough~~ random numbers in this way is not bad:
 
 ```
 $really_random = $maybe_random + $other_random_number;
