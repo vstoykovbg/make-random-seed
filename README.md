@@ -11,6 +11,7 @@ Also these scripts use `%` (<a href="http://en.wikipedia.org/wiki/Modulo_operati
 
 ``
 $really_random = $maybe_random + $numberfromstring;
+
 $really_random = $really_random % $max_words;
 ``
 
