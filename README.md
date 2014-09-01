@@ -10,6 +10,7 @@ But if the second random number is relatively small (for example: 1..6), maybe t
 Also the scripts below are using `%` (<a href="http://en.wikipedia.org/wiki/Modulo_operation">modulo operation</a>), so I suppose adding ~~big enough~~ random numbers in this way is not bad:
 
 ```
+$maybe_random = irand($maximum); # random integer between 0 and $maximum-1
 $really_random = $maybe_random + $other_random_number;
 $really_random = $really_random % $maximum;
 ```
