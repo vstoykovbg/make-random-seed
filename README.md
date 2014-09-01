@@ -5,9 +5,9 @@ Make random seed (random list of words). No user input needed. Maybe this is bet
 
 <a href="http://stackoverflow.com/questions/14741158/does-adding-random-numbers-make-them-more-random">Does adding random numbers make them more random?</a> No. It makes them less random.
 
-But if the second random number is relatively small (for example: 1..6), maybe there is no decrease of randomness.
+Ff the second random number is relatively small (for example: 1..6), there is little decrease of randomness.
 
-Also the scripts below are using `%` (<a href="http://en.wikipedia.org/wiki/Modulo_operation">modulo operation</a>), so I suppose adding ~~big enough~~ random numbers in this way is not bad:
+But the scripts below are using `%` (<a href="http://en.wikipedia.org/wiki/Modulo_operation">modulo operation</a>), so I suppose adding random numbers in this way is not bad:
 
 ```
 $maybe_random = irand($maximum); # random integer between 0 and $maximum-1
