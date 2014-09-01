@@ -5,6 +5,7 @@ Make random seed (random list of words). No user input needed. Maybe this is bet
 
 <a href="http://stackoverflow.com/questions/14741158/does-adding-random-numbers-make-them-more-random">Does adding random numbers make them more random?</a> No. It makes them less random.
 
+But if the second random number is in relatively small (for example: 1..6), maybe there is no decrease of randomness.
 
 make_random_seed.pl
 ===================
