@@ -14,17 +14,26 @@ $really_random = ( $maybe_random ^ $other_random_number ) % $maximum;
 
 We have two random numbers. And we don't know which of them is more random than other. Maybe computer generated random numbers are more random. Maybe there is a bug and numbers from computer's RNG are not so random. So, we mix them and the result is more random than the less random number.
 
+
+make_random_seed_simple.pl
+==========================
+
+Make random seed (random list of words). No user input needed. Run this if you trust the <a href="https://en.wikipedia.org/wiki/Pseudorandom_number_generator">PRNG</a>.
+
 You need to install `Math::Random::Secure` first:
 
 ```
 $ cpan install Math::Random::Secure 
 ```
 
+make_random_seed_simple2.pl
+===========================
 
-make_random_seed_simple.pl
-==========================
+Same as above, but is using `Crypt::Random`. You need to install it:
 
-Make random seed (random list of words). No user input needed. Run this if you trust the <a href="https://en.wikipedia.org/wiki/Pseudorandom_number_generator">PRNG</a>.
+```
+$ cpan install Crypt::Random
+```
 
 
 make_random_seed.pl
