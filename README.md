@@ -35,7 +35,7 @@ Make random seed (random list of words). The program will ask for random numbers
 4548 * 484 / 485  + 6
 ```
 
-The result of human generated expression is mixed with computer generated random number (using the algorithm listed above).
+The result of the human generated expression is mixed with the computer generated random number (using the algorithm listed above).
 
 You need to install `Math::Random::Secure` first:
 
