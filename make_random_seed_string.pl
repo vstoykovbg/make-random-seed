@@ -304,9 +304,8 @@ for ( my $m = 0 ; $m < $howmanywords ; $m++ ) {
 
     print "The number derived from the string is: $numberfromstring\n";
     
-    $really_random = $maybe_random + $numberfromstring;
-    $really_random = $really_random % $max_words;
-    
+    $really_random = ($maybe_random ^ $numberfromstring) % $max_words;
+
     print "The really random number is: $really_random\n";
     
     push( @seed, $words[$really_random] );
