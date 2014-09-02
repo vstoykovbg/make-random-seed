@@ -1,3 +1,11 @@
+Warning
+=======
+
+This code maybe is not very secure.
+
+Read this thread on Reddit: <a href="http://www.reddit.com/r/mathematics/comments/2f9286/is_this_algorithm_good_for_mixing_random_numbers/">Is this algorithm good for mixing random numbers?</a>.
+
+
 Mixing Random Numbers Without Decrease of Randomness
 ====================================================
 
