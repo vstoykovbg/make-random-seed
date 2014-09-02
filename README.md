@@ -1,4 +1,4 @@
-Mixing Random Numbers without Decrease of Randomness
+Mixing Random Numbers Without Decrease of Randomness
 ====================================================
 
 <a href="http://stackoverflow.com/questions/14741158/does-adding-random-numbers-make-them-more-random">Does adding random numbers make them more random?</a> No. It makes them less random.
