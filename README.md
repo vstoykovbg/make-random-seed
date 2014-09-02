@@ -13,6 +13,8 @@ $maybe_random = irand($maximum); # random integer between 0 and $maximum-1
 $really_random = ( $maybe_random + $other_random_number ) % $maximum;
 ```
 
+We have two random numbers. And we don't know which of them is more random than other. Maybe computer generated random numbers are more random. Maybe there is a bug and numbers from computer's RNG are not so random. So, we mix them and the result is more random than the less random number.
+
 
 make_random_seed_simple.pl
 ==========================
