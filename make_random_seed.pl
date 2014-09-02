@@ -293,8 +293,7 @@ for ( my $m = 0 ; $m < $howmanywords ; $m++ ) {
     $maybe_random = irand($max_words);
     print "Please enter random number (or expression) and press Enter: $maybe_random + ";
     $line          = <STDIN>;
-    $really_random = $maybe_random + int( eval($line) );
-    $really_random = $really_random % $max_words;
+    $really_random = ($maybe_random ^ int( eval($line) )) % $max_words;
     push( @seed, $words[$really_random] );
 }
 
