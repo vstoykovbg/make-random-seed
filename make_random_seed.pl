@@ -1,9 +1,10 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 
 use strict;
 
-# Get a random integer (faster than int(rand))
-use Math::Random::Secure qw(irand);
+use Math::Random::Secure qw( irand );
+use Crypt::Random qw( makerandom );
+use Digest::SHA;
 
 my @words = (
     "like",         "just",         "love",       "know",       "never",       "want",
@@ -282,19 +283,111 @@ my @words = (
 my $howmanywords = 12;
 my $max_words    = $#words;
 my @seed;
-my $maybe_random;
-my $really_random;
-my $line;
 
-@seed = ();
+# return number between 0 and 65535
+# 0xFFFF = 65535
+sub make_decimal_from_hex_hash($) {
+    my $string = shift;
+
+    my @string_parts = $string =~ /(.{1,4})/g;
+
+    my $random;
+
+    foreach (@string_parts) {
+        $random = $random ^ hex $_;
+    }
+
+    return $random;
+}
+
+# the input should contain only numbers from 1 to 6
+# not 0 to 5
+sub dice_to_decimal($) {
+    my $string = shift;
+    my $m      = 0;
+    my $dec    = 0;
+
+    $string =~ s/[^\d]//g;    # remove all non-digits
+    $string = reverse($string);
+
+    foreach ( split //, $string ) {
+        $dec += int( $_ - 1 ) * ( 6**$m );
+        $m++;
+    }
+
+    return $dec;
+}
+
+sub get_random_number_between_zero_and_FFFF($$) {
+
+    my $dice_input          = shift;
+    my $random_string_input = shift;
+    my $maxplusone          = 0xFFFF + 1;
+
+    $random_string_input = join $random_string_input, makerandom( Size => 16, Strength => 1 );
+
+    my $raw = dice_to_decimal($dice_input);
+
+    print "    debug: raw=$raw (decimal number derived from dice)\n";
+
+    my $limited = $raw % $maxplusone;    # between 0 and 0xFFFF
+
+    print "    debug: limited=$limited (\$raw % \$maxplusone)\n";
+
+    my $alg = "sha256";
+    my $sha = Digest::SHA->new($alg);
+    $sha->add($random_string_input);
+    my $digest = $sha->hexdigest;
+
+    my $from_hash = make_decimal_from_hex_hash($digest);
+
+    print "    debug: from_hash=$from_hash\n";
+
+    my $from_irand = irand($maxplusone);
+    print "    debug: from_irand=$from_irand\n";
+
+    return $from_hash ^ $limited ^ $from_irand;
+
+}
+
+# returns a random integer in the range [0, $n)
+sub random_in_range($) {
+    my $n        = shift;    # the new range - should be natural number smaller than $RAND_MAX
+    my $RAND_MAX = 0xFFFF;
+
+    print "Please enter the results from 7 dice rolls and press Enter: ";
+    my $dice_rolls = <STDIN>;
+
+    print "Please enter some random string and press Enter: ";
+
+    my $some_random_data = <STDIN>;
+
+    if ( $n <= 0 || $n > $RAND_MAX ) {
+        return undef;
+    }
+
+    my $bucket_size = int( $RAND_MAX / $n );
+
+    print "    debug: bucket_size=$bucket_size\n";
+
+    my $r;
+    my $debug = 0;
+    do {
+        if    ( $debug != 0 ) { print "    debug: WARNING: algorithm did not like the number.\n" }
+        elsif ( $debug > 20 ) { die "Fatal error: too many attempts - this was weird.\n" }
+        $r = int( get_random_number_between_zero_and_FFFF( $dice_rolls, $some_random_data ) / $bucket_size );
+        print "    debug: r=$r  counter: $debug\n";
+        $debug++;
+    } while ( $r >= $n );
+
+    return $r;
+
+}
 
 for ( my $m = 0 ; $m < $howmanywords ; $m++ ) {
 
-    $maybe_random = irand($max_words);
-    print "Please enter random number (or expression) and press Enter: $maybe_random + ";
-    $line          = <STDIN>;
-    $really_random = ($maybe_random ^ int( eval($line) )) % $max_words;
-    push( @seed, $words[$really_random] );
+push( @seed, $words[random_in_range($max_words)] );
+
 }
 
 print "\n==== Random words: ====================================================\n\n";
@@ -304,3 +397,5 @@ foreach (@seed) {
 }
 
 print "\n\n=======================================================================\n\n";
+
+
