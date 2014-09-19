@@ -9,7 +9,7 @@ TLDR version: $really_random_number = decimal_from_dice($user_input_dice) ^  $ra
 make_random_seed.pl
 ===================
 
-Make random seed (random list of words). The program will ask 12 times for 7 random numbers made with dice and for random string. 
+Make random seed (random list of words). The program will ask 12 times for 7 random numbers made with dice and random string. 
 
 You need to install `Math::Random::Secure` and `Crypt::Random` first:
 
