@@ -1,5 +1,5 @@
-Mixing Random Numbers Without Decrease of Randomness
-====================================================
+Mixing Random Numbers
+=====================
 
 See the source code for explaination how it works. Also read this thread on Reddit: <a href="http://www.reddit.com/r/mathematics/comments/2f9286/is_this_algorithm_good_for_mixing_random_numbers/">Is this algorithm good for mixing random numbers?</a>.
 
