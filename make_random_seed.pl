@@ -550,26 +550,26 @@ print "   Please type 1 or 2 and press Enter: ";
 my $word_list_number = <STDIN>;
 $word_list_number =~ s/[^\d]//g;    # remove all non-digits
 
-switch($word_list_number){
-case 1 { @words = @words_electrum_1; }
-case 2 { @words = @words_BIP39;
+switch ($word_list_number) {
+    case 1 { @words = @words_electrum_1; }
+    case 2 {
+        @words = @words_BIP39;
 
-print "Please enter how many random words should be chosen and press Enter.\n";
-print "  13 for Electrum 2.x\n";
-print "  12..24 for other wallets\n";
-$howmanywords = <STDIN>;
-$howmanywords =~ s/[^\d]//g;    # remove all non-digits
+        print "Please enter how many random words should be chosen and press Enter.\n";
+        print "  13 for Electrum 2.x\n";
+        print "  12..24 for other wallets\n";
+        $howmanywords = <STDIN>;
+        $howmanywords =~ s/[^\d]//g;    # remove all non-digits
 
-}
-else { die "Invalid word list selected.\n" }
-}
-
-if ($howmanywords < 12) {
-die "Invalid number of words selected.\n";
+    }
+    else { die "Invalid word list selected.\n" }
 }
 
+if ( $howmanywords < 12 ) {
+    die "Invalid number of words selected.\n";
+}
 
-my $max_words    = $#words;
+my $max_words = $#words;
 my @seed;
 
 # return number between 0 and 65535
@@ -674,7 +674,7 @@ sub random_in_range($) {
 
 for ( my $m = 0 ; $m < $howmanywords ; $m++ ) {
 
-push( @seed, $words[random_in_range($max_words)] );
+    push( @seed, $words[ random_in_range($max_words) ] );
 
 }
 
@@ -685,5 +685,4 @@ foreach (@seed) {
 }
 
 print "\n\n=======================================================================\n\n";
-
 
