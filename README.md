@@ -19,3 +19,11 @@ TLDR version (simplified):
 ```
 $really_random_number = decimal_from_dice($user_input_dice) ^  $random_number_from_PRNG ^ number_from_hash(sha256hash( join $random_string_input, $another_random_number_from_PRNG ));
 ```
+
+Diceware-like lists
+===================
+
+The downside of using Diceware-like lists is that you need to "throw away" most of the random numbers made with dice. To choose one random word you need 5 dice rolls. If the permutation is not valid, you need to make another 5 dice rolls until you get valid permutation (probably it will take about 25 dice rolls per word).
+
+<a href="Diceware-like-list-for-Electrum-1.pl">Diceware-like-list-for-Electrum-1.pl</a> - for Electrum 1.x
+<a href="Diceware-like-list-for-Electrum-2-BIP39.pl">Diceware-like-list-for-Electrum-2-BIP39.pl</a> - for BIP39 and Electrum 2.x
