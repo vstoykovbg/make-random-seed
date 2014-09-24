@@ -13,7 +13,9 @@ $really_random_number = decimal_from_dice($user_input_dice) ^  $random_number_fr
 make_random_seed.pl
 ===================
 
-Make random seed (random list of words). The program will ask 12 times for 7 dice rolls and random string.
+Make random seed (random list of words). The program will ask first which word list should be used (Electrum 1.x or BIP39). If you select BIP39 word list, the program will ask how many random words should be chosen. If you select Electrum 1.x word list, the program will choose 12 random words.
+
+For every random word, the program will ask for 7 dice rolls and random string.
 
 You need to install `Math::Random::Secure` and `Crypt::Random` first:
 
