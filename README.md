@@ -1,3 +1,13 @@
+Known bugs
+==========
+
+This script `make_random_seed.pl` does not compute the checksum according to a <a href="https://en.bitcoin.it/wiki/BIP_0039">BIP39</a>.
+
+Also if you use the Diceware-like lits you probably will not get mnemonic seed with correct checksum.
+
+It looks like Electrum 1.9.8 works without computing the checksum. I tested with arbitrary mnemonic seed and the program is accepting it.
+
+
 make_random_seed.pl
 ===================
 
