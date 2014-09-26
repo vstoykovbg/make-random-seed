@@ -35,6 +35,8 @@ Diceware-like lists
 
 The downside of using Diceware-like lists is that you need to "throw away" most of the random numbers made with dice. To choose one random word you need 5 dice rolls. If the <a href="http://en.wikipedia.org/wiki/Senary">senary</a> number is not in the list, you need to make another 5 dice rolls until you get senary number that is in the list (probably it will take about 25 dice rolls per word).
 
+<b>Only the list for Electrum 1.x is useful because Electrum 2.x and BIP39 wallets require mnemonic code with the correct checksum.</b>
+
 <a href="Diceware-like-list-for-Electrum-1.pl">Diceware-like-list-for-Electrum-1.pl</a> - for Electrum 1.x
 
 <a href="Diceware-like-list-for-Electrum-2-BIP39.pl">Diceware-like-list-for-Electrum-2-BIP39.pl</a> - for BIP39 and Electrum 2.x
