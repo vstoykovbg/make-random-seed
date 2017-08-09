@@ -1,4 +1,11 @@
-Known bugs
+Make secure passphrases
+=====
+
+One use case for this script is to generate secure passphrases for apps accepting long passphrases. You may add additional security to your passphrase by using my [slow KDF](https://github.com/vstoykovbg/slowkdf).
+
+Тhe benefits of using words from the BIP39 list (instead of random words) is that these words are selected to reduce the risk of human read-write errors (when you read the word list from paper and writing it into computer).
+
+Known bugs (if used for seeds)
 ==========
 
 This script `make_random_seed.pl` does not compute the checksum according to a <a href="https://en.bitcoin.it/wiki/BIP_0039">BIP39</a>. Also, if you use the Diceware-like lits you probably will not get a mnemonic seed with correct checksum.
@@ -27,11 +34,6 @@ Possible use cases if you use another wallet
 =====
 
 I did not tested it with other BIP39 wallets, but it should work if your wallet does not require your seed to have a valid checksum.
-
-Make secure passphrases
-=====
-
-Another possible use case is to generate secure passphrase for apps accepting long passphrases. You may add additional security to your passphrase by using my [slow KDF](https://github.com/vstoykovbg/slowkdf).
 
 make_random_seed.pl
 ===================
