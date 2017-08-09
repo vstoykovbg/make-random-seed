@@ -22,7 +22,7 @@ Better (or worse?) alternative to my script
 
 If you are looking for another script that computes seeds with correct checksums: [Mnemonic Code Converter](https://iancoleman.github.io/bip39/) (JavaScript, requires browser). It allows you to supply your own entropy (if you don't trust your [browser's random number generator](https://developer.mozilla.org/en-US/docs/Web/API/RandomSource/getRandomValues)). I did not read the code and presume that this app
 
-Tested it with `1544234774264585` and it gives `coffee forward seat` - so, it looks like it does not mix your entropy with the machine-generated random numbers (like my script do).
+Tested it with `1544234774264585` and it gives `coffee forward seat` every time - so, it looks like it does not mix your entropy with the machine-generated random numbers (like my script do).
 
 You may use the full output of my script (including the `debug` lines and user's input) and copy/paste it into Mnemonic Code Converter as entropy source. This way it will
 
