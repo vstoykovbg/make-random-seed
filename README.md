@@ -45,11 +45,11 @@ I did not tested it with other BIP39 wallets, but it should work if your wallet 
 make_random_seed.pl
 ===================
 
-Make random seed (random list of words). The program will ask first which word list should be used (Electrum 1.x or BIP39). If you select BIP39 word list, the program will ask how many random words should be chosen.
+The program creates random seed (random list of words). The program will ask first which word list should be used (Electrum 1.x or BIP39). If you select BIP39 word list, the program will ask how many random words should be chosen. (It does not calculate correct checksums for the BIP39 list, see the "Known bugs" section above.)
 
 For every random word, the program will ask for 7 dice rolls and а random string (you may get it from a random page on a random book you choose).
 
-The program will tolerate user input errors. For example, you can write only 4 dice rolls, no dice rolls at all. Or write only random strings (and skip writing the results from a dice rolls). It will produce usabe results because it is mixing the user's input with a computer-generated random numbers.
+The program will tolerate user input errors. For example, you can write only 4 dice rolls, no dice rolls at all. Or write only random strings (and skip writing the results from a dice rolls). It will produce usable results because it is mixing the user's input with a computer-generated random numbers.
 
 You need to install `Math::Random::Secure` and `Crypt::Random` first:
 
