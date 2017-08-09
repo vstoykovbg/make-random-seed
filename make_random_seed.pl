@@ -545,7 +545,7 @@ my $howmanywords = 12;
 
 print "Please choose the word list: \n";
 print "1) Electrum 1.x\n";
-print "2) Electrum 2.x / BIP39\n";
+print "2) BIP39 (without checksum!)\n";
 print "   Please type 1 or 2 and press Enter: ";
 my $word_list_number = <STDIN>;
 $word_list_number =~ s/[^\d]//g;    # remove all non-digits
@@ -556,8 +556,6 @@ switch ($word_list_number) {
         @words = @words_BIP39;
 
         print "Please enter how many random words should be chosen and press Enter.\n";
-        print "  13 for Electrum 2.x\n";
-        print "  12..24 for other wallets\n";
         $howmanywords = <STDIN>;
         $howmanywords =~ s/[^\d]//g;    # remove all non-digits
 
@@ -565,7 +563,7 @@ switch ($word_list_number) {
     else { die "Invalid word list selected.\n" }
 }
 
-if ( $howmanywords < 12 ) {
+if ( $howmanywords < 1 ) {
     die "Invalid number of words selected.\n";
 }
 
