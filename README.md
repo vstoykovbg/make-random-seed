@@ -20,7 +20,7 @@ Electrum 2.9.2 can accept seeds in the old format, BIP39 with checksum and BIP39
 Better (or worse?) alternative to my script
 =====
 
-If you are looking for another script that computes seeds with correct checksums: [Mnemonic Code Converter](https://iancoleman.github.io/bip39/) (JavaScript, requires browser). It allows you to supply your own entropy (if you don't trust your [browser's random number generator](https://developer.mozilla.org/en-US/docs/Web/API/RandomSource/getRandomValues)). I did not read the code and presume that this app
+If you are looking for another script that computes seeds with correct checksums: [Mnemonic Code Converter](https://iancoleman.github.io/bip39/) (JavaScript, requires browser). It allows you to supply your own entropy (if you don't trust your [browser's random number generator](https://developer.mozilla.org/en-US/docs/Web/API/RandomSource/getRandomValues)).
 
 Tested it with `1544234774264585` and it gives `coffee forward seat` every time - so, it looks like it does not mix your entropy with the machine-generated random numbers (like my script do).
 
