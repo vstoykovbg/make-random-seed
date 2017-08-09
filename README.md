@@ -47,7 +47,7 @@ make_random_seed.pl
 
 Make random seed (random list of words). The program will ask first which word list should be used (Electrum 1.x or BIP39). If you select BIP39 word list, the program will ask how many random words should be chosen.
 
-For every random word, the program will ask for 7 dice rolls and random string (you may get it from a random page on a random book you choose).
+For every random word, the program will ask for 7 dice rolls and а random string (you may get it from a random page on a random book you choose).
 
 You need to install `Math::Random::Secure` and `Crypt::Random` first:
 
