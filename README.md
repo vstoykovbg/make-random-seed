@@ -26,7 +26,7 @@ Possible use cases if you use Electrum 2.9.2
 Possible use cases if you use another wallet
 =====
 
-I did not tested it with other BIP39 wallets, but it sould work if your wallet does not require your seed to have a valid checksum.
+I did not tested it with other BIP39 wallets, but it should work if your wallet does not require your seed to have a valid checksum.
 
 Make secure passphrases
 =====
@@ -47,7 +47,7 @@ $ cpan install Math::Random::Secure
 $ cpan install Crypt::Random
 ```
 
-See the source code for explaination how it works. Also read this thread on Reddit: <a href="http://www.reddit.com/r/mathematics/comments/2f9286/is_this_algorithm_good_for_mixing_random_numbers/">Is this algorithm good for mixing random numbers?</a>.
+See the source code for explanation how it works. Also read this thread on Reddit: <a href="http://www.reddit.com/r/mathematics/comments/2f9286/is_this_algorithm_good_for_mixing_random_numbers/">Is this algorithm good for mixing random numbers?</a>.
 
 TLDR version (simplified):
 
