@@ -11,6 +11,8 @@ One use case for this script is to generate secure passphrases for apps acceptin
 Known bugs (if used for seeds)
 ==========
 
+TLDR: if you use Electrum 1.9.8 tick `[x] BIP39 seed` when using BIP39 seed, otherwise it would not work.
+
 This script `make_random_seed.pl` does not compute the checksum according to a <a href="https://en.bitcoin.it/wiki/BIP_0039">BIP39</a>. Also, if you use the Diceware-like lits you probably will not get a mnemonic seed with correct checksum.
 
 It looks like Electrum 1.9.8 works without computing the checksum. I tested it with an arbitrary mnemonic seed and the program is accepting it.
