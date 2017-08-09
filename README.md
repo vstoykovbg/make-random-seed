@@ -45,7 +45,7 @@ I did not tested it with other BIP39 wallets, but it should work if your wallet 
 make_random_seed.pl
 ===================
 
-Make random seed (random list of words). The program will ask first which word list should be used (Electrum 1.x or BIP39). If you select BIP39 word list, the program will ask how many random words should be chosen. If you select Electrum 1.x word list, the program will choose 12 random words.
+Make random seed (random list of words). The program will ask first which word list should be used (Electrum 1.x or BIP39). If you select BIP39 word list, the program will ask how many random words should be chosen. If you select Electrum 1.x word list, the program will create 12 random words from the old list.
 
 For every random word, the program will ask for 7 dice rolls and random string (you may get it from a random page on a random book you choose).
 
