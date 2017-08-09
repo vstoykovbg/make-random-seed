@@ -5,7 +5,7 @@ This script `make_random_seed.pl` does not compute the checksum according to a <
 
 It looks like Electrum 1.9.8 works without computing the checksum. I tested it with an arbitrary mnemonic seed and the program is accepting it.
 
-Electrum 2.9.2 can accept seeds in the old format, BIP39 with checsum and BIP39 without checksum (plus additional arbitrary words - you need to tick `[x] Extend this seed with custom words` to use this feature, it's visible after you click `Options`).
+Electrum 2.9.2 can accept seeds in the old format, BIP39 with checksum and BIP39 without checksum (plus additional arbitrary words - you need to tick `[x] Extend this seed with custom words` to use this feature, it's visible after you click `Options`).
 
 Better (or worse?) alternative to my script
 =====
@@ -38,7 +38,7 @@ make_random_seed.pl
 
 Make random seed (random list of words). The program will ask first which word list should be used (Electrum 1.x or BIP39). If you select BIP39 word list, the program will ask how many random words should be chosen. If you select Electrum 1.x word list, the program will choose 12 random words.
 
-For every random word, the program will ask for 7 dice rolls and random string.
+For every random word, the program will ask for 7 dice rolls and random string (you may get it from a random page on a random book you choose).
 
 You need to install `Math::Random::Secure` and `Crypt::Random` first:
 
