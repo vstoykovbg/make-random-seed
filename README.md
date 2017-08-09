@@ -49,7 +49,7 @@ The program creates random seed (random list of words). The program will ask fir
 
 For every random word, the program will ask for 7 dice rolls and а random string (you may get it from a random page on a random book you choose).
 
-The program will tolerate user input errors. For example, you can write only 4 dice rolls, no dice rolls at all. Or write only random strings (and skip writing the results from a dice rolls). It will produce usable results because it is mixing the user's input with a computer-generated random numbers.
+The program will tolerate user input errors. For example, you can write the results of only 4 dice rolls, 8 dice rolls. Or write only random strings (and skip writing the results from a dice rolls). It will produce usable results because it is mixing the user's input with a computer-generated random numbers.
 
 You need to install `Math::Random::Secure` and `Crypt::Random` first:
 
