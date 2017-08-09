@@ -3,7 +3,7 @@ Make secure passphrases
 
 One use case for this script is to generate secure passphrases for apps accepting long passphrases. You may add additional security to your passphrase by using my [slow KDF](https://github.com/vstoykovbg/slowkdf).
 
-Тhe benefits of using words from the BIP39 list (instead of random words) is that these words are selected to reduce the risk of human read-write errors (when you read the word list from paper and writing it into computer).
+Тhe benefits of using words from the BIP39 list (instead of random words) is that these words are selected to reduce the risk of human read-write errors (when you read the word list from paper and writing it into computer). (But this is not very useful if your app does not check if words are from the list - i.e. `build` vs `built`.)
 
 * [NIST’s new password rules – what you need to know](https://nakedsecurity.sophos.com/2016/08/18/nists-new-password-rules-what-you-need-to-know/)
 * [Best practices for passwords updated after original author regrets his advice](https://www.theverge.com/2017/8/7/16107966/password-tips-bill-burr-regrets-advice-nits-cybersecurity)
