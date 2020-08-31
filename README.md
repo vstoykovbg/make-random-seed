@@ -1,5 +1,8 @@
 Make secure passphrases
 =====
+I am keeping it for educational purposes, to see how the UX is bad (the user needs to enter random stuff multiple times, instead at once).
+ :point_right: This is my new key stretching script: [Doubleslow Keystretcher](https://github.com/vstoykovbg/doubleslow)
+ :point_right: Simple script for creating random valid BIP39 seed with 24 words: [make-seed.py](https://github.com/vstoykovbg/doubleslow/blob/main/make-seed.py)
 
 One use case for this script is to generate secure passphrases for apps accepting long passphrases. You may add additional security to your passphrase by using my [slow KDF](https://github.com/vstoykovbg/slowkdf).
 
