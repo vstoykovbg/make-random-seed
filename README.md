@@ -1,7 +1,7 @@
 Make secure passphrases
 =====
 
-I am keeping it for educational purposes, as example of bad user experience (the user needs to enter random stuff multiple times, instead at once; the seed does not have a valid checksum).
+I am keeping it for educational purposes, as an example of bad user experience (the user needs to enter random stuff multiple times, instead of at once; the seed does not have a valid checksum). However, the code can be interesting, especially the algorithm of producing random numbers in range - `random_in_range()`.
 
  :point_right: This is my new key stretching script: [Doubleslow Keystretcher](https://github.com/vstoykovbg/doubleslow)
  
