@@ -1,7 +1,7 @@
 Make secure passphrases
 =====
 
-I am keeping it for educational purposes, to see how the UX is bad (the user needs to enter random stuff multiple times, instead at once).
+I am keeping it for educational purposes, as example of bad user experience (the user needs to enter random stuff multiple times, instead at once; the seed does not have a valid checksum).
 
  :point_right: This is my new key stretching script: [Doubleslow Keystretcher](https://github.com/vstoykovbg/doubleslow)
  
