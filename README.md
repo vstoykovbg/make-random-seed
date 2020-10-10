@@ -5,7 +5,7 @@ I am keeping it for educational purposes, as an example of bad user experience (
 
  :point_right: This is my new key stretching script: [Doubleslow Keystretcher](https://github.com/vstoykovbg/doubleslow)
  
- :point_right: Simple script for creating random valid BIP39 seed with 24 words: [make-seed.py](https://github.com/vstoykovbg/doubleslow/blob/main/make-seed.py)
+ :point_right: Simple script for creating random valid BIP39 seeds with 24 words: [make-seed.py](https://github.com/vstoykovbg/doubleslow/blob/main/make-seed.py)
 
 Rounding errors when using int()
 =====
