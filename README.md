@@ -10,9 +10,9 @@ I am keeping it for educational purposes, as an example of bad user experience (
 Rounding errors when using int()
 =====
 
-Sometimes int( $a / $b ) produces rounding errors. For example: int(-6.725/0.025)
+Sometimes `int( $a / $b )` produces rounding errors. For example: `int(-6.725/0.025)`.
 
-Using POSIX::floor( $a / $b ) is more reliable.
+Using `POSIX::floor( $a / $b )` is more reliable.
 
 I corrected the script to use POSIX::floor() instead of int().
 
