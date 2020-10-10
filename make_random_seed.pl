@@ -2,6 +2,8 @@
 
 use strict;
 
+use POSIX qw(floor);
+
 use Switch;
 use Math::Random::Secure qw( irand );
 use Crypt::Random qw( makerandom );
@@ -652,17 +654,26 @@ sub random_in_range($) {
         return undef;
     }
 
-    my $bucket_size = int( $RAND_MAX / $n );
+    my $bucket_size_int = int( $RAND_MAX / $n );
+    my $bucket_size = floor( $RAND_MAX / $n );
 
     print "    debug: bucket_size=$bucket_size\n";
+    if ($bucket_size != $bucket_size_int) { print "    debug: bucket_size_int is different ($bucket_size_int)\n" }
 
     my $r;
+    my $r_int;
     my $debug = 0;
+    my $random_number_between_zero_and_FFFF;
     do {
         if    ( $debug != 0 ) { print "    debug: WARNING: algorithm did not like the number.\n" }
         elsif ( $debug > 20 ) { die "Fatal error: too many attempts - this was weird.\n" }
-        $r = int( get_random_number_between_zero_and_FFFF( $dice_rolls, $some_random_data ) / $bucket_size );
+        $random_number_between_zero_and_FFFF = get_random_number_between_zero_and_FFFF( $dice_rolls, $some_random_data );
+        $r_int = int( $random_number_between_zero_and_FFFF / $bucket_size );
+        # int( $a / $b ) sometimes produces rounding errors. For example: int(-6.725/0.025)
+        # Using POSIX::floor() is more reliable.
+        $r = floor( $random_number_between_zero_and_FFFF / $bucket_size );
         print "    debug: r=$r n=$n counter=$debug\n";
+        if ($r != $r_int) { print "    debug: r_int is different ($r_int)\n" }
         $debug++;
     } while ( $r >= $n );
 
