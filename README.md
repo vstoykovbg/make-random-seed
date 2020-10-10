@@ -7,6 +7,19 @@ I am keeping it for educational purposes, as an example of bad user experience (
  
  :point_right: Simple script for creating random valid BIP39 seed with 24 words: [make-seed.py](https://github.com/vstoykovbg/doubleslow/blob/main/make-seed.py)
 
+Rounding errors when using int()
+=====
+
+Sometimes int( $a / $b ) produces rounding errors. For example: int(-6.725/0.025)
+
+Using POSIX::floor() is more reliable.
+
+I corrected the script to use POSIX::floor() instead of int().
+
+This bug is very unlikely to occur. Аnd its consequences on the quality of the generated random numbers are negligible.
+
+I am not sure if the bug can happen at all, given the ranges of the numbers subject to division.
+
 ----------------
 
 One use case for this script is to generate secure passphrases for apps accepting long passphrases. You may add additional security to your passphrase by using my [slow KDF](https://github.com/vstoykovbg/slowkdf).
